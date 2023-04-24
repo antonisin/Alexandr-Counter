@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+    php:
+        container_name: 'alexandr_counter_php'
+        image: php:alpine
+        networks: [default]
+        restart: always
+        volumes:
+            - ./src:/var/www
+        expose: [ 80 ]
+        command: "php -S 0.0.0.0:80 -t /var/www"
+
+networks:
+    default:
+        external: true
+        name: proxy
