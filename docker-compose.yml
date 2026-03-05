@@ -10,6 +10,9 @@ services:
             - ./src:/var/www
         expose: [ 80 ]
         command: "php -S 0.0.0.0:80 -t /var/www"
+        environment:
+            - APP_ENV=${APP_ENV:-production}
+            - APP_DEBUG=${APP_DEBUG:-false}
 
 networks:
     default:

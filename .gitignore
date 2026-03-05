@@ -1,2 +1,6 @@
 .idea**
 src/counter.json
+
+.env
+.env.local
+.env.*.local
