@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Alexandr-Counter — Custom Dark Theme
+   Enhances Bootstrap 4.5.0 — does NOT replace it
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section 1 — CSS Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --bg-dark: #2b2b2b;
+  --bg-card: #3a3a3a;
+  --accent: #28a745;
+  --accent-hover: #218838;
+  --text-primary: #ffffff;
+  --text-muted: #adb5bd;
+  --border-color: #4a4a4a;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Section 2 — Base / Layout
+   -------------------------------------------------------------------------- */
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.inner.cover {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3 — Button Enhancements
+   -------------------------------------------------------------------------- */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-success {
+  box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.btn-danger {
+  margin-left: 0.5rem;
+}
+
+.btn-info.btn-sm {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 4 — Stats Row (view.php)
+   -------------------------------------------------------------------------- */
+.row .col-sm-12 {
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.row span[style] {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: var(--accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Section 5 — Table
+   -------------------------------------------------------------------------- */
+.table.table-dark {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table.table-dark thead th {
+  background: #1a1a1a;
+  padding: 1rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table.table-dark tbody td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-color: var(--border-color);
+}
+
+.table.table-dark tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   Section 6 — Page Heading (index.php "Links:" text)
+   -------------------------------------------------------------------------- */
+main.cover > :first-child {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 7 — Utility / Misc
+   -------------------------------------------------------------------------- */
+a {
+  color: inherit;
+}
+
+a:not(.btn):hover {
+  color: var(--accent);
+  text-decoration: none;
+}
